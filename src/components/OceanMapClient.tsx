@@ -189,11 +189,11 @@ export default function OceanMapClient({
         maxZoom={19}
       />
 
-      {/* Stamen Toner Hybrid — labels + coastlines only, free, no key */}
+      {/* ESRI Reference overlay — country/city labels + coastlines, free, no key */}
       <TileLayer
-        url="https://tiles.stadiamaps.com/tiles/stamen_toner_labels/{z}/{x}/{y}{r}.png"
-        attribution='&copy; <a href="https://stamen.com">Stamen Design</a> / <a href="https://stadiamaps.com">Stadia Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        opacity={0.7}
+        url="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}"
+        attribution="Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012"
+        opacity={0.85}
         zIndex={10}
       />
 
